@@ -7,8 +7,5 @@
 
 import Foundation
 enum Constants:String {
-
     case quoteUrl = "https://api.quotable.io/random"
-    
-    
 }

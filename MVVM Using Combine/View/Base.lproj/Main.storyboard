@@ -19,10 +19,19 @@
                                 <rect key="frame" x="30" y="338.66666666666669" width="333" height="200.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOL-3z-Sbm">
-                                        <rect key="frame" x="0.0" y="0.0" width="333" height="141.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="101.33333333333333"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9F-5H-9be">
+                                        <rect key="frame" x="0.0" y="121.3333333333333" width="333" height="20.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.329999999999998" id="Mlx-co-dFg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcW-5V-P2x">
                                         <rect key="frame" x="0.0" y="161.66666666666663" width="333" height="38.333333333333343"/>
@@ -53,6 +62,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authorLabel" destination="D9F-5H-9be" id="UG1-1f-gGG"/>
                         <outlet property="quoteLabel" destination="qOL-3z-Sbm" id="sLP-WR-i8T"/>
                         <outlet property="refreshButton" destination="KcW-5V-P2x" id="JQ4-yA-7dH"/>
                     </connections>

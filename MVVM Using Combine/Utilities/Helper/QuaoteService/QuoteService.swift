@@ -17,7 +17,6 @@ class QuoteService:QuoteServiceType {
             }.map( {$0.data})
             .decode(type: Quote.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
-        return Empty().eraseToAnyPublisher()
     }
 
 }

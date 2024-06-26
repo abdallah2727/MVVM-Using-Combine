@@ -9,6 +9,7 @@ import UIKit
 import Combine
 class QuoteViewController: UIViewController {
 
+    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var quoteLabel: UILabel!
     private let vm = QuoteViewModel()
@@ -30,8 +31,11 @@ class QuoteViewController: UIViewController {
             switch event {
             case .fetchQuateDidFail(let error):
                 self?.quoteLabel.text = error.localizedDescription
+                self?.authorLabel.text = ""
+                self?.refreshButton.isEnabled = false
             case .fetchQuateDidSucceed(let quote):
                 self?.quoteLabel.text = quote.content
+                self?.authorLabel.text = "By: "+quote.author
             case .toggleButton(let isEnabled):
                 self?.refreshButton.isEnabled = isEnabled
             }
